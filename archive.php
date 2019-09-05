@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package tema_base
+ * @package Mi_tema
  */
 
 get_header();
