@@ -163,4 +163,14 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
+//Sustituir automáticamente «img» con «figure» || https://ayudawp.com/html5-sustituir-img-figure-wordpress/
+function cambiar_img_por_figure( $content )
+{ 
+    $content = preg_replace( 
+        '/<p>\\s*?(<a rel=\"attachment.*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', 
+        '<figure>$1</figure>', 
+        $content 
+    ); 
+    return $content; 
+} 
+add_filter( 'the_content', 'cambiar_img_por_figure', 99 );
