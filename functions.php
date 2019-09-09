@@ -174,3 +174,4 @@ function cambiar_img_por_figure( $content )
     return $content; 
 } 
 add_filter( 'the_content', 'cambiar_img_por_figure', 99 );
+
