@@ -20,8 +20,8 @@ function mitema_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'mitema_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 2000,
+		'height'                 => 650,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'mitema_header_style',
 	) ) );

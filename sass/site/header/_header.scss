@@ -1,1 +1,65 @@
-//Archivo header
+header{
+
+    .header-content{
+        display: flex;
+        color: #ffffff;
+        justify-content: space-between;
+        margin: 20px 20px 0;
+    }
+    figure{
+        max-height: 45vh;
+        margin: 0;
+        display: block;
+        overflow: hidden;
+        img{
+        width: 100vw;
+    }
+     .header-logo{
+         display: flex;
+         flex-direction: column;
+         align-self: flex-end;
+         margin: 0 20px 5px 0;
+         border: 1px solid #fff;
+            img{
+                width: 70px;
+            }
+        }
+    }
+  
+    .site-branding{
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        min-width: 25%;
+    }
+        .site-description{
+            margin: 0;
+        }
+        .site-title{
+            margin: 0;
+            a{
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+    #site-navigation{
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        align-items: flex-end;
+            a{
+                color: #cccccc;
+                text-decoration: none;
+            }
+            a:hover{
+                color: #666666;
+            }
+            ul ul{
+                background-color:$color__skin;
+                padding: 5px 10px;
+            }
+    }
+}
+#masthead{
+        background-color:$color__skin;
+    }
