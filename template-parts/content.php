@@ -14,18 +14,21 @@
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
+			mitema_metainfo();
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				mitema_posted_on();
-				mitema_posted_by();
+		if ( !is_singular() ) :
+			if ( 'post' === get_post_type() ) :
 				?>
-			</div><!-- .entry-meta -->
+				<div class="entry-meta">
+					<?php
+					mitema_posted_on();
+					mitema_posted_by();
+					?>
+				</div><!-- .entry-meta -->
+			<?php endif; ?>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 

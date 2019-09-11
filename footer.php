@@ -27,6 +27,14 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'mitema' ), 'mitema', '<a href="http://underscores.me/">paco silva</a>' );
 				?>
 		</div><!-- .site-info -->
+		<div class="menu-footer-container">
+			<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-2',
+						'menu_id'        => 'footer-menu',
+					) );
+			?>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

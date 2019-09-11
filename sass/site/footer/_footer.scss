@@ -1,0 +1,17 @@
+footer{
+    .menu-footer-container{
+        text-align: center;
+    }
+    #footer-menu li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 10px;
+        }
+    #footer-menu a{
+        text-decoration: none;
+    }
+    ol, ul{
+        margin: 0;
+        padding: 0;
+    }
+}
