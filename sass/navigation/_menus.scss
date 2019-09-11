@@ -105,3 +105,28 @@
 		width: 50%;
 	}
 }
+
+.nav-links{
+	.nav-previous{
+		margin-left: 20px;
+	}
+	.nav-next{
+		margin-right: 20px;
+	}
+	.nav-previous, .nav-next{
+		padding: 10px 20px;
+		border: 1px solid;
+		border-color: $color__skin;
+		width: 200px;
+		max-width: 50%;
+		font-size: .8em;
+		line-height: 1em;
+	}
+	.post-prev-container, .post-next-container{
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		width: 100%;
+		display: block;
+		overflow: hidden;
+	}
+}

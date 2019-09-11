@@ -159,3 +159,13 @@ if ( ! function_exists( 'mitema_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+function mitema_the_post_navigation(){
+	the_post_navigation( array(
+            'prev_text'                  => "<span class='post-prev-container'>". __( '<strong>Anterior:</strong><br> %title' ) . "</span>",
+            'next_text'                  => "<span class='post-next-container'>".__( '<strong>Siguiente:</strong><br> %title' ) . "</span>",
+            'in_same_term'               => true,
+            'taxonomy'                   => __( 'post_tag' ),
+            'screen_reader_text' => __( 'Continue Reading' ),
+        ) );
+}

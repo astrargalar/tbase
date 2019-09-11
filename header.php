@@ -31,18 +31,19 @@
 		</figure>
 		<div class="header-content">
 			<div class="header-logo">
-				<img src="<?php echo get_template_directory_uri();?>/images/bin/logo.png" >
+				<figure>
+				<?php the_custom_logo();?>
+				</figure>
 			</div>
 				<div class="site-branding">
 					<?php
-					the_custom_logo();
 					if ( is_front_page() && is_home() ) :
 						?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<?php
 					else :
 						?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<h2 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
 						<?php
 					endif;
 					$mitema_description = get_bloginfo( 'description', 'display' );

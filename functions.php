@@ -41,6 +41,8 @@ if ( ! function_exists( 'mitema_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size("mitema_full_size", 2000, 650);
+		add_image_size("mitema_small_size", 400, 200);
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
