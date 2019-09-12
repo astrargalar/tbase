@@ -18,5 +18,27 @@
 	clear: both;
 	width: $size__site-main;
 }
-
+@media screen and (max-width : 37.5em){
+	.content-area{
+		float: none;
+		width: 100%;
+	}
+	.site-main{
+		margin: 0;
+	}
+	.site-content .widget-area {
+		float: none;
+		margin: 20px auto;
+		width: 90%;
+	}
+	.site-content .widget-area .widget{
+		display: inline-block;
+		vertical-align: top;
+		border-top: 2px solid;
+		border-color: $color__skin;
+		padding-top: 10px;
+		min-width: 45%;
+	}
+	
+}
 @import "no-sidebar";
