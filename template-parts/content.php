@@ -17,20 +17,28 @@
 			mitema_metainfo();
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			if ( has_post_thumbnail()){
-				the_post_thumbnail('mitema_small_size');
+			?>
+			<div class="linea"></div>
+			<?php
+			
+			if ( has_post_thumbnail()){?>
+			<div class="imagen_mini">
+				<figure>
+					<div class="caja">
+						<?php
+						mitema_posted_on();
+						mitema_posted_by();
+						?>
+					</div><!-- caja -->
+						<a href="<?php the_permalink();?>"><?php
+						the_post_thumbnail('mitema_small_size');  ?>
+						</a>
+				</figure>
+			</div><!-- .imagen_mini -->
+				<?php
 			}
-		endif;
-		if ( !is_singular()) :
-					if ( 'post' === get_post_type() ) :	?>
-						<div class="entry-meta">
-							<?php
-							mitema_posted_on();
-							mitema_posted_by();
-							?>
-						</div><!-- .entry-meta -->
-					<?php endif; ?>
-					<?php endif; ?>
+		endif;?>
+		
 	</header><!-- .entry-header -->
 
 

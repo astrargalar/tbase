@@ -15,6 +15,7 @@ function mitema_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
+		$classes[] = 'listado';
 	}
 
 	// Adds a class of no-sidebar when there is no sidebar present.

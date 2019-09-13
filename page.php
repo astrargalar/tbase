@@ -14,7 +14,13 @@
 
 get_header();
 ?>
-
+	<?php if(has_post_thumbnail()){ ?>
+					<figure class="imagen-destacada">
+								<?php 
+								the_post_thumbnail('mitema_full_size');
+								?>
+					</figure>
+	<?php }?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 

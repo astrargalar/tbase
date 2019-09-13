@@ -25,7 +25,23 @@ img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 }
-
+.size-mitema_full_size{
+	width: 100%;
+	// max-width: 100%;
+	overflow: hidden;
+	height: auto;
+}
+.imagen_mini{
+	width: 40%;
+	float: left;
+	margin: 0 10px 0px 0;
+	border: 2px solid #fff;
+	border-radius: 5px;
+}
+.caja{
+	padding: 5px;
+	background: #fff;
+}
 figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
 	&.imagen-destacada{

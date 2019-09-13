@@ -23,3 +23,12 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+.linea{
+	border-top: 1px solid;
+	border-color:  $color__skin;
+	padding-bottom: 10px;
+}
+
+body.listado h2{
+	margin: 5px 0;
+}
