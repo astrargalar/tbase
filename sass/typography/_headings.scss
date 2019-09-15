@@ -2,3 +2,13 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-family: $font__rotulos;
 }
+h1{
+	color: $color__skin;
+}
+h1.page-title.results-page.results-page {
+	margin-left: 35px;
+}
+h1 span.search-terms{
+	color: $color__skin;
+	background: yellow;
+}

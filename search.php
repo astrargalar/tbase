@@ -16,12 +16,10 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'mitema' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
+				<h1 class="page-title results-page">
+					<?php printf( esc_html__( 'Resultados para: %s', 'mitema' ), '<span>'. '</span>');
+					 /* Contador de busqueda */ $allsearch =new WP_Query("s=$s&showposts=-1"); $key = esc_html($s, 1); $count = $allsearch->post_count; _e(''); _e('<span class="search-terms">'); echo $key; _e('</span>'); _e(' — '); echo $count . ' '; _e('entradas'); wp_reset_query(); ?></h1>
+			
 			</header><!-- .page-header -->
 
 			<?php

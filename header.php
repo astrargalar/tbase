@@ -30,11 +30,7 @@
 		<?php the_header_image_tag(); ?>
 		</figure>
 		<div class="header-content">
-			<div class="header-logo">
-				<figure>
-				<?php the_custom_logo();?>
-				</figure>
-			</div>
+			
 				<div class="site-branding">
 					<?php
 					if ( is_front_page() && is_home() ) :
@@ -52,6 +48,11 @@
 						<p class="site-description"><?php echo $mitema_description; /* WPCS: xss ok. */ ?></p>
 					<?php endif; ?>
 				</div><!-- .site-branding -->
+				<div class="header-logo">
+				<figure class="custom-logo">
+				<?php the_custom_logo();?>
+				</figure>
+			</div>
 
 				<nav id="site-navigation" class="main-navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mitema' ); ?></button>

@@ -14,8 +14,6 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php mitema_post_thumbnail( 'mitema_small_size' ); ?>
-
 	<div class="entry-content">
 		<?php
 		the_content();
