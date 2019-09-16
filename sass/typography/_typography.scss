@@ -9,7 +9,11 @@ textarea {
 	@include font-size(1);
 	line-height: $font__line-height-body;
 }
-
+.search-excerpt{
+	color:blue;
+	background-color: yellow;
+	font-size: 1.2em;
+}
 @import "headings";
 
 @import "copy";

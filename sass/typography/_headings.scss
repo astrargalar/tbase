@@ -12,3 +12,6 @@ h1 span.search-terms{
 	color: $color__skin;
 	background: yellow;
 }
+h2.comments-title, h3.comment-reply-title, p.logged-in-as, p.comment-form-comment, p.form-submit, div.site-info{
+	margin-left: 70px;
+}

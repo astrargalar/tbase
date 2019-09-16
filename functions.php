@@ -139,7 +139,17 @@ function mitema_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mitema_scripts' );
-
+//Resaltar términos buscados en los resultados de las búsquedas (Crear la clase .search-excerpt para darle el formato que queramos)
+function wps_highlight_results($text){
+     if(is_search()){
+     $sr = get_query_var('s');
+     $keys = explode(" ",$sr);
+     $text = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">'.$sr.'</strong>', $text);
+     }
+     return $text;
+}
+add_filter('the_excerpt', 'wps_highlight_results');
+add_filter('the_title', 'wps_highlight_results');
 
 /**
  * Implement the Custom Header feature.
