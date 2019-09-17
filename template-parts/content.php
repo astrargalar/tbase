@@ -43,7 +43,7 @@
 
 
 	<div class="entry-content">
-		<?php
+		<?php if ( is_singular() ) :
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
@@ -56,7 +56,9 @@
 			),
 			get_the_title()
 		) );
-
+		else :
+			the_excerpt();
+		endif;
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mitema' ),
 			'after'  => '</div>',

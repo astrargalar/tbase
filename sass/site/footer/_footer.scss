@@ -1,4 +1,21 @@
 footer{
+    &.site-footer{
+            font-size: 1.1em;
+            background-color: $color__skin;
+            margin: 20px 0 0;
+            #footer-menu li a{
+                color: #fff;
+            }
+    }
+    footer.site-info{
+        color: #fff;
+    }
+
+    div.footer{
+        display: flex;
+        justify-content:space-around;
+        color: #fff;
+    }
     .menu-footer-container{
         text-align: center;
     }
@@ -10,8 +27,13 @@ footer{
     #footer-menu a{
         text-decoration: none;
     }
-    ol, ul{
+    ol {
         margin: 0;
         padding: 0;
+    }
+    ul{
+        background: transparent;
+        padding: 10px 0;
+        margin: 0;
     }
 }
