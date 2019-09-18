@@ -169,3 +169,13 @@ function mitema_the_post_navigation(){
             'screen_reader_text' => __( 'Continue Reading' ),
         ) );
 }
+
+function mitema_excerpt_more($more){
+	return " ...";
+}
+add_filter("excerpt_more", "mitema_excerpt_more");
+
+function mitema_excerpt_length($length){
+	return 100;
+}
+add_filter("excerpt_length", "mitema_excerpt_length");

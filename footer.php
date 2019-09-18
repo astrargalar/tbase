@@ -29,11 +29,17 @@
 				?>
 		</div><!-- .site-info -->
 		<div class="menu-footer-container">
-			<?php
+			<?php 
+				if(has_nav_menu('menu-2')){
 					wp_nav_menu( array(
 						'theme_location' => 'menu-2',
 						'menu_id'        => 'footer-menu',
 					) );
+				} else{
+					?>
+					<a href="<?php echo get_home_url() ?>">Ir a la home </a>
+					<?php
+				}
 			?>
 		</div><!-- .menu-footer-container -->
 		</div><!-- .footer -->

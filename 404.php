@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area <?php if( !is_active_sidebar("sidebar-1")){echo "sin-widget";} ?>">
 		<main id="main" class="site-main">
 
 			<section class="error-404 not-found">
