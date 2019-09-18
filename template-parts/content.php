@@ -17,6 +17,11 @@
 			mitema_metainfo();
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			if(has_tag("html")){
+				?>
+				<h3 class="html-content">Contenido relacionado con la etiqueta HTML</h3>
+				<?php
+			}
 			?>
 			<div class="linea"></div>
 			<?php

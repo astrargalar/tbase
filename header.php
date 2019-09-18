@@ -49,9 +49,16 @@
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 				<div class="header-logo">
-				<figure class="custom-logo">
-				<?php the_custom_logo();?>
-				</figure>
+						<figure class="custom-logo">
+							<?php
+								if(has_custom_logo()){
+									the_custom_logo();
+								}
+								else { ?>
+									<img src="<?php echo get_template_directory_uri(); ?>/images/bin/logo.png"/>
+									<?php }
+							?>
+						</figure>
 			</div>
 
 				<nav id="site-navigation" class="main-navigation">

@@ -28,6 +28,12 @@ get_header();?>
 
 			mitema_the_post_navigation();
 
+			if(is_singular()){
+				print("<article>");
+				the_widget("WP_Widget_Tag_Cloud");
+				print("</article>");
+			}
+
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
