@@ -9,6 +9,8 @@
 	h2{
 		border-bottom: 1px solid;
 		border-color: $color__skin;
+		padding-top: 5px;
+        padding-bottom: 5px;
 	}
 	&.widget_archive{
 		li{
@@ -20,7 +22,7 @@
 		}
 	}
 	&.widget_recent_entries{
-		max-height: 50px;
+		max-height: 60px;
 		overflow: hidden;
 		transition: max-height 0.9s cubic-bezier(0, 1, 0, 1);
 		h2{

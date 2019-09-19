@@ -25,6 +25,14 @@
 			?>
 			<div class="linea"></div>
 			<?php
+				$importante= get_post_meta( get_the_ID(), 'importante' );
+					if( $importante && $importante[0] == 1) {
+					?>
+						<h3 class="importante">¡¡Importante!!</h3>
+					<?php
+					}
+			?>
+			<?php
 			
 			if ( has_post_thumbnail()){?>
 			<div class="imagen_mini">
@@ -42,7 +50,8 @@
 			</div><!-- .imagen_mini -->
 				<?php
 			}
-		endif;?>
+		endif 
+		?>
 		
 	</header><!-- .entry-header -->
 
