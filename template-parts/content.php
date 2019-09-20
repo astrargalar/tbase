@@ -19,7 +19,7 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			if(has_tag("html")){
 				?>
-				<h3 class="html-content">Contenido relacionado con la etiqueta HTML</h3>
+				<h3 class="html-content">Contenido relacionado con HTML</h3>
 				<?php
 			}
 			?>
@@ -28,7 +28,7 @@
 				$importante= get_post_meta( get_the_ID(), 'importante' );
 					if( $importante && $importante[0] == 1) {
 					?>
-						<h3 class="importante">¡¡Importante!!</h3>
+						<h3 class="importante">¡¡Ojo!! Importante</h3>
 					<?php
 					}
 			?>

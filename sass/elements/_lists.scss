@@ -23,3 +23,18 @@ dt {
 dd {
 	margin: 0 1.5em 1.5em;
 }
+ul.lista-posts{
+	list-style: none;
+	background: transparent;
+	margin-left: 20px;
+	padding: 0;
+	
+}
+ul.lista-posts li a{
+	padding:  4px 10px;
+	margin: 10px 0;
+	background-color: #fff;
+	border-radius: 10px;
+	width: 300px;
+	display: block;
+}

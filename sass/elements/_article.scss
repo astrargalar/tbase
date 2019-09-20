@@ -6,9 +6,9 @@ article, #comments{
     // background: $color__fondo-listado;
     border-radius: 8px;
 }
-body.single article.tag-html {
+body.single  article.tag-html{
     background-color: #ced7e6;
-}
+    }
 
 article.tag-html{
     h3.html-content{
@@ -19,6 +19,13 @@ article.tag-html{
     padding: 4px 10px;
     }
 }
+ h3.importante{
+    background-color: $color__content-links;
+    color: #fff;
+    width: 250px;
+    border-radius: 10px;
+    padding: 4px 10px;
+    }
 .bloque-metas{
     &:after{
         content: "|";
