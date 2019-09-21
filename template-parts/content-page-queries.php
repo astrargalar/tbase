@@ -33,14 +33,38 @@
 // Esta es la forma moderna de hacer consultas a la base de datos
 		echo '<h3>últimos Posts de la categoría Html</h3>';
 		echo "<ul class='lista-posts'>";
-		$page=2;
-		$custom_query= new WP_Query('cat=33&posts_per_page=3&order=DESC&paged='.$page);
-							while($custom_query->have_posts()) : $custom_query->the_post();
-								echo '<li><a href="'. get_permalink() . '">';
-								the_title();
-								echo '</a></li>';
-							endwhile;
-						wp_reset_query();
+				$page=2;
+				$custom_query= new WP_Query('cat=33&posts_per_page=3&order=DESC&paged='.$page);
+									while($custom_query->have_posts()) : $custom_query->the_post();
+										echo '<li><a href="'. get_permalink() . '">';
+										the_title();
+										echo '</a></li>';
+									endwhile;
+								wp_reset_postdata();
+		echo '</ul>';
+		// Otra forma moderna de hacer consultas a la base de datos con get_posts
+		echo '<h3>últimos Posts de la categoría Eyes Case</h3>';
+		echo "<ul class='lista-posts'>";
+				$args=array('category'=>23,
+									'order'=>"DESC",
+									'numberposts'=>3	);
+				$custom_posts = get_posts($args);
+				foreach($custom_posts as $post){
+							echo '<li><a href="'. get_permalink() . '">';
+									$limit = 28;//Aquí vamos a truncar el título a la longuitud que queramos
+									$title = $post->post_title; 
+									$length = strlen($title);
+									$the_title = substr($title, 0, $limit);				
+								if($length >= $limit){
+									echo $the_title .= ' [...]';;
+								} elseif ($post->post_title == ""){//Aquí vamos a comprobar que el título exista y sino mostraremos un mensaje.
+									echo "Este post no tiene título";
+									}
+									else{
+											the_title();// Si el título tiene una longuitud menor a lo establecido en $limit, lo mostramos tal cual.
+									}
+							echo '</a></li>';
+				}
 		echo '</ul>';
 
 		wp_link_pages( array(
