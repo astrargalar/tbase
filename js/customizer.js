@@ -38,5 +38,10 @@
 				} );
 			}
 		} );
-	} );
+	});
+	wp.customize( 'mitema_title_color', function( value ) {
+		value.bind( function( to ) {
+			$( 'h1.entry-title' ).css( {'color': to} );
+		});
+		});
 } )( jQuery );

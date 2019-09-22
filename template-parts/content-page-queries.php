@@ -18,7 +18,7 @@
 		<?php
 		the_content();
 // Esta forma es la antigua de hacer consultas a la base de datos y ya no se utiliza
-		echo '<h3>Posts de la categoría: Media</h3>';
+		echo '<h3>Posts de la categoría: Media. Utilizando el método query_post() que ya está obsoleto.</h3>';
 		echo "<ul class='lista-posts'>";
 		query_posts('cat=34');
 						if(have_posts()){
@@ -31,7 +31,7 @@
 						wp_reset_query();
 		echo '</ul>';
 // Esta es la forma moderna de hacer consultas a la base de datos
-		echo '<h3>últimos Posts de la categoría Html</h3>';
+		echo '<h3>últimos Posts de la categoría Html Utilizando el método WP_Query</h3>';
 		echo "<ul class='lista-posts'>";
 				$page=2;
 				$custom_query= new WP_Query('cat=33&posts_per_page=3&order=DESC&paged='.$page);
@@ -42,8 +42,8 @@
 									endwhile;
 								wp_reset_postdata();
 		echo '</ul>';
-		// Otra forma moderna de hacer consultas a la base de datos con get_posts
-		echo '<h3>últimos Posts de la categoría Eyes Case</h3>';
+		// Otra forma moderna de hacer consultas a la base de datos con get_posts y no tendremos que hacer wp_reset
+		echo '<h3>últimos Posts de la categoría Eyes Case - Utilizando el método get_posts()</h3>';
 		echo "<ul class='lista-posts'>";
 				$args=array('category'=>23,
 									'order'=>"DESC",
@@ -66,6 +66,21 @@
 							echo '</a></li>';
 				}
 		echo '</ul>';
+		//Mostrar el contenido de otra página dentro de esta
+									$args=array('post_type'=>'page',
+														//'page_id'=>2, Para recuperar las páginas por su Id
+														'pagename'=>'pagina-ejemplo'//Así para recuperarlas por su slug
+										);
+									$custom_query= new WP_Query($args);
+									while($custom_query->have_posts()) : $custom_query->the_post();
+										echo '<h2>';
+										the_title();
+										echo '</h2>';
+										echo '<section class="pagina_interna">';
+										the_content();
+										echo '</section>';
+									endwhile;
+								wp_reset_postdata();
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mitema' ),

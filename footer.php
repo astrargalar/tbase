@@ -12,7 +12,9 @@
 ?>
 
 	</div><!-- #content -->
-
+	<?php  $con_footer = get_theme_mod('mitema_show_footer');
+		if($con_footer == 'con_footer'){
+	?>
 	<footer id="colophon" class="site-footer">
 		<div class="footer">
 		<div class="site-info">
@@ -44,6 +46,9 @@
 		</div><!-- .menu-footer-container -->
 		</div><!-- .footer -->
 	</footer><!-- #colophon -->
+	<?php
+		};
+	?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
