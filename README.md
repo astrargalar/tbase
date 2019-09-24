@@ -1,22 +1,24 @@
 Este es mi tema base hecho a partir de _s 'underscores' con sass,  siguiendo el curso de Jorge González Villanueva https://www.linkedin.com/learning/instructors/jorge-gonzalez-villanueva?trk=v2b_redirect_learning y adaptaciones de mi cosecha. Creo que me ha quedado un tema robusto y bien construido que puede servir de base a cualquier otro adaptando solamente las características especiales de cada uno pero con un esqueleto que no hay que tocar.
-He actualizado los archivos gylp y json para eliminar vulnerabilidades y he puesto las herramientas a las últimas versiones estables. Practicamente este es el trabajo que habrá que ir haciendo cada vez que se utilice este tema.
+He actualizado los archivos gulp y json para eliminar vulnerabilidades y he puesto las herramientas a las últimas versiones estables. Practicamente este es el trabajo que habrá que ir haciendo cada vez que se utilice este tema.
 
 Instalación: 
-1.- Instalar Node.js (descargar de nodejs.org/es/ y descargarnos la versión de nuestro sistema operativo)
+1.- Instalar Node.js (descargar de https://nodejs.org/es/ y descargarnos la versión de nuestro sistema operativo)
 2.-  Una vez instalado Node, abrir un terminal y ejecutar npm install gulp-cli -g  para que se instale gulp de manera global en todo el ordenador, no solo en la carpeta en la que estemos instalándolo. (gulpjs.com).
 3.- Instalar Ruby (Mac ya lo trae instalado por defecto y no hay que hacerlo). Ir a https://rubyinstaller.org/  e instalar la versión adecuada a nuestro ordenador.
 4.- Instalar Sass, también hay que hacerlo abriendo una terminal y teclear el comando gem install sass .
 5.- Comprobar que está todo correctamente instalado tecleando en un nuevo terminal node -v para que nos devuelva la versión que tenemos instalada. Lo mismo tenemos que hacer con ruby -v y con sass -v. Si nos devuelve las versiones instalada es que está todo correcto.
 6.- Revisar los archivos gulfile.js y package.json y comprobar que las versiones a las que se refieren de los paquetes que hay que instalar sean las ultimas. (Esto no es extrictamente necesario pero nos evitará vulnerabilidades).
 7.- Cambiar a la carpeta de donde vayamos a desarrollar nuestro tema, abrir un terminal y teclear npm install para que se instalen todos los paquetes necesarios para que las tareas recogidas en gulfile.js se puedan ejecutar. Esto bajará todos los paquetes y los guardará en una carpeta llamada node_modules  (Esta carpeta no la tenemos que tocar).
-8.- Ya por fin está todo instalado y solo nos queda escribir en el terminal gulp. Gulp realizará las tareas que tiene programas en gulfile.js y automáticamente vigilará cada cambio que hagamos para actualizar tanto las imágenes que metamos en la carpeta images/raw que las optimizará y crará una cópia en la carpeta images/bin y vigilará todos nuestros archivos sass que optimizará y minificará crando el archivo style.css (No escribir nada directamente en él porque se eliminará al actualizar cualquier archivo Sass) y por último vigilará todos nuestros archivos js, los unificará y minificará creando el archivo allmin.js.
+8.- Ya por fin está todo instalado y solo nos queda escribir en el terminal gulp. Gulp realizará las tareas que tiene programas en gulfile.js y automáticamente vigilará cada cambio que hagamos para actualizar tanto las imágenes que metamos en la carpeta images/raw que las optimizará y creará una cópia en la carpeta images/bin y vigilará todos nuestros archivos sass que optimizará y minificará crando el archivo style.css (No escribir nada directamente en él porque se eliminará al actualizar cualquier archivo Sass) y por último vigilará todos nuestros archivos js, los unificará y minificará creando el archivo allmin.js.
 9.- Si hacemos esto en VisualStudioCode será mucho más rápido y cómodo para trabajar por nuestra parte ya que tendremos a la vista el código, el aspecto de la web siempre actualizado con livereload y la terminal desde donde Gulp nos indicará cada paso que vaya dando.
 =========================================================================================
 Bueno ahora solo falta empezar a crear nuestro propio tema con la certeza de que nos quedará como un tema profesional y perfectamente optimizado. Es recomendable subir el tema a github que desde VSC es sencillo y sin problemas.
 
-
+This is my base theme made from _s 'underscores' with sass, following the course of Jorge González Villanueva https://www.linkedin.com/learning/instructors/jorge-gonzalez-villanueva?trk=v2b_redirect_learning and adaptations made by myself.
+I think I have a robust and well built theme that can serve as the basis for any other adapting only the special characteristics of each one but with a skeleton that should not be touched.
+I have updated the gulp and json files to eliminate vulnerabilities and I have put the tools to the latest stable versions. Practically this is the work that will have to be done each time this topic is used.
 Installation:
-1.- Install Node.js (download from nodejs.org/es/ and download the version of our operating system)
+1.- Install Node.js (download from https://nodejs.org/es/ and download the version of our operating system)
 2.- Once Node is installed, open a terminal and run npm install gulp-cli -g so that gulp is installed globally on the entire computer, not only in the folder in which we are installing it. (gulpjs.com).
 3.- Install Ruby (Mac already has it installed by default and you don't have to do it). Go to https://rubyinstaller.org/ and install the appropriate version to our computer.
 4.- Install Sass, you also have to do it by opening a terminal and typing the gem install sass command.
@@ -29,9 +31,6 @@ Installation:
 Well now we just have to start creating our own theme with the certainty that it will be a professional and perfectly optimized theme.
 It is advisable to upload the topic to github that from VSC is simple and hassle free.
 
-This is my base theme made from _s 'underscores' with sass, following the course of Jorge González Villanueva https://www.linkedin.com/learning/instructors/jorge-gonzalez-villanueva?trk=v2b_redirect_learning and adaptations made by myself.
-I think I have a robust and well built theme that can serve as the basis for any other adapting only the special characteristics of each one but with a skeleton that should not be touched.
-I have updated the gylp and json files to eliminate vulnerabilities and I have put the tools to the latest stable versions. Practically this is the work that will have to be done each time this topic is used.
 
 
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
